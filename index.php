@@ -364,7 +364,7 @@ echo $html;
 
 $endtime = microtime();
 
-$db =& cmsms()->GetDb();
+$db = cmsms()->GetDb();
 
 if( $config['debug'] == TRUE || (isset($config['show_performance_info']) && ($showtemplate == true)) )
   {

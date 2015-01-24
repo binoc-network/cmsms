@@ -255,9 +255,8 @@ class cms_url
   public function set_query($val)
   {
     return $this->_set_part('query',$val);
-    if( $val )
-      {
-	$this->_query = parse_str($val);
+    if( $val ) {
+$this->_query = parse_str($val);
       }
   }
 
@@ -289,10 +288,9 @@ class cms_url
 
   public function set_queryvar($key,$value)
   {
-    if( $key && $value )
-      {
-	$this->_query[$key] = $value;
-      }
+     if( $key && strlen($value) ) {
+         $this->_query[$key] = $value;
+     }
   }
 
 
