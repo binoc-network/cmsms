@@ -93,7 +93,7 @@ if ($submitted == 1)
       "group_perms (group_perm_id, group_id, permission_id, create_date, modified_date)
        VALUES (?,?,?,$now,$now)";
 
-    $selected_groups = unserialize(base64_decode($_POST['sel_groups']));
+    $selected_groups = (array) unserialize(base64_decode($_POST['sel_groups']));
     if( is_array($selected_groups) && count($selected_groups) ) {
         // clean this array
         $tmp = array();
